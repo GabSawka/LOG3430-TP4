@@ -1,6 +1,7 @@
 name: Python package
 on: [push]
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
@@ -10,7 +11,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
-      - name: install packages
+      - name: Install packages
         run: pip install -r requirements.txt
-      - name: run tests
-        run: python manage.py test
+      - run: python manage.py test
